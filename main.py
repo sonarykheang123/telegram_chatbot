@@ -7,7 +7,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 TOKEN = "8048524018:AAEbepb_WF4_SNf9n0h03UKLldhV6f_Xqxo"
 
 # Example API URL for StackExchange (you can replace with any other API)
-API_URL = "https://api.stackexchange.com/2.3/search/advanced"
+API_URL = "https://api.chatgpt.com/c/673c3fe2-0cb4-800c-b5ed-42d468480105"
 
 # Store questions and responses in a JSON format (you could store this in a file or database in a real-world scenario)
 qa_data = {
@@ -124,7 +124,7 @@ def get_api_answer(query):
         'order': 'desc',
         'sort': 'relevance',
         'q': query,
-        'site': 'stackoverflow'
+        'site': 'ChatGPT'
     }
     response = requests.get(API_URL, params=params)
     data = response.json()
